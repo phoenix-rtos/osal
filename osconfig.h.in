@@ -36,6 +36,9 @@
  * with existing code referencing these symbols)
  */
 
+#define OS_STATIC_LOADER
+
+
  /**
   * \brief The maximum number of  to support
   *

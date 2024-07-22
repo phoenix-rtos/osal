@@ -1,0 +1,43 @@
+{
+	"files.associations": {
+		"**.c": "c",
+		"**.h": "c",
+		"**.ldt": "linkerscript",
+		"os-phoenix.h": "c",
+		"os-shared-condvar.h": "c",
+		"os-shared-globaldefs.h": "c",
+		"os-impl-condvar.h": "c",
+		"os-shared-idmap.h": "c",
+		"semlib.h": "c",
+		"ocs_semlib.h": "c",
+		"os-posix.h": "c",
+		"os-shared-binsem.h": "c",
+		"semaphore.h": "c",
+		"time.h": "c",
+		"osconfig.h": "c",
+		"os-shared-countsem.h": "c",
+		"os-impl-countsem.h": "c",
+		"os-shared-file.h": "c",
+		"os-impl-files.h": "c",
+		"osapi-idmap.h": "c",
+		"common_types.h": "c",
+		"msg.h": "c",
+		"pthread.h": "c",
+		"os-shared-timebase.h": "c",
+		"os-impl-timebase.h": "c",
+		"osapi-task.h": "c",
+		"bsp-impl.h": "c",
+		"osapi-common.h": "c",
+		"generic_phoenix_bsp_internal.h": "c",
+		"os-impl-tasks.h": "c",
+		"os-impl-gettime.h": "c",
+		"osapi.h": "c",
+		"threads.h": "c",
+		"ut_oscore_queue_test.h": "c",
+		"os-impl-mutex.h": "c",
+		"unistd.h": "c"
+	},
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	}
+}

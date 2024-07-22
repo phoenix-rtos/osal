@@ -1,0 +1,53 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build all",
+			"type": "shell",
+			"command": "cd ~/phoenix-rtos-project && DEBUG=1 CONSOLE=serial TARGET=${input:target} phoenix-rtos-build/build.sh all",
+			"group": "build"
+		},
+		{
+			"label": "Build all test",
+			"type": "shell",
+			"command": "cd ~/phoenix-rtos-project && DEBUG=1 CONSOLE=serial TARGET=${input:target} phoenix-rtos-build/build.sh all test",
+			"group": "build"
+		},
+		{
+			"label": "Clean build & generate compilation db",
+			"type": "shell",
+			"command": "cd ~/phoenix-rtos-project && TARGET=${input:target} phoenix-rtos-build/build.sh clean && DEBUG=1 CONSOLE=serial TARGET=${input:target} bear --output _build/${input:target}/compile_commands.json --append -- phoenix-rtos-build/build.sh all",
+			"group": "build"
+		},
+		{
+			"label": "Clean build",
+			"type": "shell",
+			"command": "cd ~/phoenix-rtos-project && DEBUG=1 CONSOLE=serial TARGET=${input:target} phoenix-rtos-build/build.sh clean all",
+			"group": "build"
+		},
+		{
+			"label": "Link compile commands",
+			"type": "shell",
+			"command": "ln -sf ~/phoenix-rtos-project/_build/${input:target}/compile_commands.json ~/phoenix-rtos-project/_build/compile_commands.json",
+			"group": "build"
+		}
+	],
+	"inputs": [
+		{
+			"type": "pickString",
+			"id": "target",
+			"description": "Select target",
+			"options": [
+				"riscv64-generic-qemu",
+				"riscv64-noelv-fpga",
+				"ia32-generic-qemu",
+				"armv7a9-zynq7000-qemu",
+				"sparcv8leon3-gr716-mimas",
+				"armv7m7-imxrt106x-evk",
+				"armv7m4-stm32l4x6-nucleo",
+				"riscv64-generic-spike",
+				"armv7a7-imx6ull-evk"
+			]
+		}
+	]
+}

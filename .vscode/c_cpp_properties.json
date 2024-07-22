@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/src/os/phoenix/inc",
+                "${workspaceFolder}/build/inc/",
+                "${workspaceFolder}/src/**",
+                "/home/lukasz/phoenix-rtos-project/_build/riscv64-generic-qemu/sysroot/usr/include"
+            ],
+            "defines": [],
+            "compilerPath": "/home/lukasz/toolchains/i386-pc-phoenix/i386-pc-phoenix/bin/i386-pc-phoenix-gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-x86"
+        }
+    ],
+    "version": 4
+}
